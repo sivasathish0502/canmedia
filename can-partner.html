@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join CAN MEDIA as a water-can partner in Chennai and explore brand advertising opportunities on your existing cans.">
+<title>Join as a Can Partner — CAN MEDIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* CAN MEDIA — Can Partner page. Palette: Midnight Blue / Rose Gold / Pearl (same tokens as the landing page) */
+:root{
+  --ink:#14213d;--ink-2:#263a63;--accent:#b76e79;--accent-2:#8f4f59;
+  --bg:#f8f6f2;--paper:#fff;--text:#1b2433;--muted:#69748a;--line:#e7e1d8;
+  --shadow-sm:0 8px 20px rgba(20,33,61,.07);--shadow-md:0 18px 45px rgba(20,33,61,.10);--shadow-lg:0 30px 70px rgba(20,33,61,.16);
+  --radius:26px;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+::selection{background:var(--accent);color:#fff}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);letter-spacing:-.01em;line-height:1.1}
+h2{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:700;margin:10px 0 14px}
+h3{font-weight:600}
+:focus-visible{outline:3px solid rgba(183,110,121,.55);outline-offset:3px}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:1000;background:rgba(248,246,242,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,225,216,.9)}
+.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--serif);font-weight:700;letter-spacing:.06em;font-size:1.35rem;color:var(--ink)}
+.logo span{color:var(--accent)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font-family:var(--sans);font-weight:700;border-radius:999px;padding:16px 26px;font-size:.95rem;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.btn.primary{background:var(--ink);color:#fff;box-shadow:0 14px 30px rgba(20,33,61,.2)}
+.btn.primary:hover{background:var(--ink-2);transform:translateY(-3px)}
+.btn.rose{background:linear-gradient(135deg,#a65f6b,var(--accent-2));color:#fff;box-shadow:0 14px 30px rgba(143,79,89,.3)}
+.btn.rose:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(143,79,89,.38)}
+.btn.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn.secondary:hover{border-color:var(--accent);color:var(--accent-2);transform:translateY(-3px)}
+.btn.small{padding:11px 20px;font-size:.86rem}
+
+/* Hero */
+.hero{padding:150px 0 90px;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 84% 16%,rgba(183,110,121,.18),transparent 36%),radial-gradient(circle at 6% 70%,rgba(20,33,61,.06),transparent 34%),linear-gradient(150deg,#fffdfa 0%,#eef1f7 100%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;background:#f1e5e7;color:#81515a;padding:9px 16px;border-radius:999px;font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(183,110,121,.16)}
+h1{font-family:var(--serif);font-weight:800;color:var(--ink);font-size:clamp(2.4rem,5.2vw,4.4rem);line-height:1.05;letter-spacing:-.02em;margin:22px 0 20px}
+h1 span{color:var(--accent-2)}
+.hero-copy>p{font-size:1.14rem;color:var(--muted);max-width:560px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 8px}
+.hero-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:30px;position:relative}
+.hero-card::before{content:"";position:absolute;inset:-14px -14px auto auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(183,110,121,.28),transparent 70%);z-index:-1}
+.hero-card h3{font-size:1.15rem;margin-bottom:6px}
+.hero-card .sub{font-size:.88rem;color:var(--muted);margin-bottom:20px}
+.flow{display:grid;gap:12px}
+.flow div{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:var(--bg);border:1px solid var(--line);font-weight:600;font-size:.92rem;color:var(--ink)}
+.flow i{font-style:normal;flex:none;width:34px;height:34px;border-radius:11px;display:grid;place-items:center;color:#fff;font-size:.85rem;font-weight:800;background:linear-gradient(150deg,var(--accent),var(--accent-2))}
+.flow .arrow{background:none;border:0;padding:0;justify-content:center;color:var(--accent);font-size:1.1rem;line-height:1}
+
+/* Sections */
+.section{padding:84px 0}
+.section.soft{background:linear-gradient(180deg,#f0f2f6,#f8f6f2)}
+.section-head{max-width:720px;margin-bottom:40px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.kicker{color:var(--accent-2);font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.section-head p{color:var(--muted);font-size:1.06rem}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px 24px 26px;box-shadow:var(--shadow-sm);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.step::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--ink))}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
+.step .num{position:absolute;top:16px;right:20px;font-family:var(--serif);font-size:2.2rem;font-weight:700;color:#efe4e0;line-height:1}
+.step .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;color:#fff;font-weight:800;margin-bottom:18px;background:linear-gradient(150deg,var(--accent),var(--accent-2));box-shadow:0 12px 24px rgba(183,110,121,.3)}
+.step p{font-size:.98rem;color:var(--ink);font-weight:600;line-height:1.5;position:relative}
+
+.why{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why li{list-style:none;display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px 24px;box-shadow:var(--shadow-sm)}
+.why li:last-child:nth-child(odd){grid-column:1/-1}
+.tick{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#f1e5e7;color:var(--accent-2);font-weight:800;font-size:.9rem}
+.why p{color:var(--text);font-weight:500}
+.disclaimer{margin-top:22px;font-size:.84rem;color:#7c879b;text-align:center}
+
+.who{background:linear-gradient(135deg,var(--ink),#344d7d);color:#fff;position:relative;overflow:hidden}
+.who::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:rgba(183,110,121,.16);right:-220px;top:-220px}
+.who .kicker{color:#e3c3c9}
+.who h2{color:#fff}
+.who .section-head p{color:#c8d0e0}
+.chips{display:flex;flex-wrap:wrap;gap:14px;position:relative}
+.chip{padding:16px 22px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-weight:600;font-size:.98rem}
+.chip::before{content:"✓";color:#f1c9cf;font-weight:800;margin-right:10px}
+
+/* Form */
+.cta{padding:84px 0 90px;background:linear-gradient(135deg,#f1e5e7,#fffefa);position:relative;overflow:hidden}
+.cta .section-head{margin:0 auto 26px;text-align:center}
+form.partner-form{max-width:900px;margin:0 auto;padding:34px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);position:relative}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:grid;gap:8px;font-size:.8rem;font-weight:700;color:#42506a;border:0;min-width:0}
+.field.full{grid-column:1/-1}
+.field .opt{font-weight:500;color:#8b93a4}
+.field input[type=text],.field input[type=tel],.field input[type=email],.field textarea{width:100%;border:1px solid #dfe3ea;background:#fbfbfa;border-radius:14px;padding:13px 15px;font:inherit;font-weight:500;color:var(--text);outline:none;transition:.2s ease}
+.field textarea{resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(183,110,121,.14)}
+fieldset.field legend{padding:0;margin-bottom:8px;font-size:.8rem;font-weight:700;color:#42506a}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.pill span{display:inline-block;padding:11px 18px;border-radius:999px;border:1px solid #dfe3ea;background:#fbfbfa;font-size:.88rem;font-weight:600;color:#42506a;transition:.2s ease}
+.pill:hover span{border-color:var(--accent)}
+.pill input:checked+span{background:linear-gradient(135deg,#a65f6b,var(--accent-2));border-color:transparent;color:#fff;box-shadow:0 8px 18px rgba(143,79,89,.28)}
+.pill input:focus-visible+span{outline:3px solid rgba(183,110,121,.5);outline-offset:2px}
+.field-invalid{border-color:#c0392b !important;box-shadow:0 0 0 3px rgba(192,57,43,.12) !important}
+.field-error{display:block;color:#c0392b;font-size:.74rem;font-weight:500;line-height:1.3}
+.submit{margin-top:24px;width:100%;border-radius:15px;padding:17px;font-size:1rem}
+.submit:disabled{opacity:.7;cursor:not-allowed}
+.form-status{text-align:center;font-weight:600;font-size:.95rem;margin-top:16px;line-height:1.5}
+.form-note{text-align:center;font-size:.74rem;color:#8b93a4;margin-top:12px}
+.contact-strip{margin-top:22px;text-align:center;font-weight:700;color:#42506a}
+
+/* Footer */
+.footer{background:var(--ink);color:#c9d1e0;padding:56px 0 28px}
+.footer-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer .logo{color:#fff}
+.footer p{font-size:.86rem;color:#95a0b8;margin-top:8px}
+.btn.light{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff}
+.btn.light:hover{background:rgba(255,255,255,.18);transform:translateY(-3px)}
+.bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:22px;font-size:.76rem;color:#8290a8;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.75s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn,.step{transition:none}}
+
+/* Responsive */
+@media(max-width:1024px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  .hero{padding-top:118px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .section,.cta{padding:70px 0}
+}
+@media(max-width:700px){
+  .why,.form-grid{grid-template-columns:1fr}
+  form.partner-form{padding:24px 18px}
+}
+@media(max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .actions .btn{width:100%}
+  .nav-inner{height:68px}
+  .logo{font-size:1.15rem}
+  .btn.small{padding:10px 14px;font-size:.8rem}
+  .hero{padding-top:104px}
+  .bottom{flex-direction:column}
+  .footer-top .btn{width:100%}
+}
+</style>
+<style id="brand-banner-style">
+/* CAN MEDIA brand image (full promotional graphic, so shown as a framed banner rather than a header logo) */
+.brand-banner-wrap{padding:56px 0}
+.brand-banner{margin:0 auto;max-width:880px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-md)}
+.brand-banner img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;margin:0 auto;border-radius:14px}
+@media(max-width:620px){.brand-banner-wrap{padding:36px 0}.brand-banner{padding:8px;border-radius:16px}.brand-banner img{max-height:420px}}
+</style>
+<style id="social-contact-style">
+/* Social icons + official contact (additive). Inline SVG, no extra dependencies. */
+.social-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.social-link{
+  width:44px;height:44px;flex:none;display:inline-grid;place-items:center;border-radius:50%;
+  color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);
+  transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease,color .25s ease;
+}
+.social-link svg{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.social-link:hover,.social-link:focus-visible{
+  transform:translateY(-3px);color:#fff;border-color:transparent;
+  background:linear-gradient(135deg,#a65f6b,var(--accent-2));
+  box-shadow:0 12px 24px rgba(143,79,89,.35);
+}
+.social-link:focus-visible{outline:3px solid rgba(183,110,121,.55);outline-offset:3px}
+.social-links.on-light .social-link{color:var(--ink);background:#fff;border-color:var(--line);box-shadow:var(--shadow-sm)}
+.social-links.on-light .social-link:hover,.social-links.on-light .social-link:focus-visible{
+  color:#fff;border-color:transparent;background:linear-gradient(135deg,#a65f6b,var(--accent-2));box-shadow:0 12px 24px rgba(143,79,89,.35);
+}
+
+/* Contact section strip (phone + official email), then follow row */
+.contact-strip{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 14px}
+.contact-strip .strip-sep{color:var(--accent)}
+.contact-strip a{overflow-wrap:anywhere;transition:color .2s ease}
+.contact-strip a:hover{color:var(--accent-2)}
+.contact-social{position:relative;z-index:1;margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 16px;color:var(--muted);font-size:.86rem;font-weight:700}
+
+/* Footer contact links */
+.footer .contact a{transition:color .2s ease}
+.footer .contact a:hover{color:#fff}
+.footer .contact .contact-email{overflow-wrap:anywhere}
+
+@media(max-width:620px){
+  .contact-strip .strip-sep{display:none}
+  .contact-strip{flex-direction:column;gap:2px}
+  .contact-strip a{font-size:clamp(.72rem,3.6vw,.95rem);overflow-wrap:normal}
+}
+@media (prefers-reduced-motion:reduce){
+  .social-link,.footer .contact a,.contact-strip a{transition:none}
+  .social-link:hover,.social-link:focus-visible{transform:none}
+}
+
+/* Partner page footer: contact + follow row */
+.footer-extra{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px 52px;margin-top:34px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
+.footer-extra h4{color:#fff;margin-bottom:14px;font-family:var(--serif);font-weight:600;font-size:1.05rem}
+.footer-extra .contact{display:grid;gap:9px;font-size:.86rem}
+</style>
+<style id="header-logo-style">
+/* Official CAN MEDIA logo in the header (additive).
+   The PNG has ~10% transparent padding on its left side; the negative margin lines the artwork up
+   with the page container's left edge. Image is never cropped, stretched or recoloured. */
+.nav .logo.logo-img{
+  --logo-w:196px;
+  display:flex;align-items:center;flex:none;line-height:0;border-radius:12px;
+  margin-left:calc(var(--logo-w) * -0.101);
+}
+.nav .logo.logo-img img{display:block;width:var(--logo-w);height:auto;max-width:none;transition:transform .25s ease}
+.nav .logo.logo-img:hover img{transform:scale(1.03)}
+.nav .logo.logo-img:focus-visible{outline:3px solid rgba(183,110,121,.55);outline-offset:2px}
+@media(max-width:1024px){.nav .logo.logo-img{--logo-w:148px}}
+@media(max-width:620px){.nav .logo.logo-img{--logo-w:120px}}
+@media(max-width:360px){.nav .logo.logo-img{--logo-w:104px}}
+@media (prefers-reduced-motion:reduce){.nav .logo.logo-img img{transition:none}.nav .logo.logo-img:hover img{transform:none}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol><symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol><symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol></svg>
+
+<header class="nav">
+ <div class="container nav-inner">
+  <a href="index.html" class="logo logo-img"><img src="./assets/images/can-media-logo.png" alt="CAN MEDIA - Your Brand on Every Can" width="1983" height="793" decoding="async" fetchpriority="high"></a>
+  <a href="index.html" class="btn secondary small">← Back to CAN MEDIA Website</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="top">
+ <div class="container hero-grid">
+  <div class="hero-copy">
+   <span class="eyebrow">Can Partner Programme · Chennai</span>
+   <h1>Your Water Cans Can Do More Than <span>Deliver Water.</span></h1>
+   <p>Already running a water-can business in Chennai? Turn your existing water-can network into a potential brand advertising opportunity with CAN MEDIA.</p>
+   <div class="actions">
+    <a class="btn rose" href="#register">Register Your Cans →</a>
+    <a class="btn secondary" href="#how">See How It Works</a>
+   </div>
+  </div>
+  <aside class="hero-card" aria-label="How the partnership connects suppliers and brands">
+   <h3>Where CAN MEDIA fits in</h3>
+   <p class="sub">We connect Chennai suppliers with brands that want to advertise.</p>
+   <div class="flow">
+    <div><i>1</i>Your cans &amp; delivery routes</div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div><i>2</i>CAN MEDIA connects the two sides</div>
+    <div class="arrow" aria-hidden="true">↓</div>
+    <div><i>3</i>Brands looking to advertise</div>
+   </div>
+  </aside>
+ </div>
+</section>
+
+<section class="section" id="how">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">The process</div>
+   <h2>How It Works</h2>
+   <p>CAN MEDIA connects brands that want to advertise with existing water-can suppliers and distributors across Chennai. A supplier with 500 cans delivering to hundreds of customers is exactly who we want to hear from.</p>
+  </div>
+  <div class="steps">
+   <div class="step reveal"><span class="num">01</span><div class="ico">1</div><p>Register your water-can business.</p></div>
+   <div class="step reveal"><span class="num">02</span><div class="ico">2</div><p>Tell us how many cans you operate.</p></div>
+   <div class="step reveal"><span class="num">03</span><div class="ico">3</div><p>Share your delivery locations across Chennai.</p></div>
+   <div class="step reveal"><span class="num">04</span><div class="ico">4</div><p>Explore suitable brand advertising opportunities with CAN MEDIA.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section soft" id="why">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">Benefits</div>
+   <h2>Why Join CAN MEDIA?</h2>
+  </div>
+  <ul class="why reveal">
+   <li><span class="tick">✓</span><p>Explore potential additional income from advertising participation.</p></li>
+   <li><span class="tick">✓</span><p>Use your existing water cans and delivery network.</p></li>
+   <li><span class="tick">✓</span><p>Connect with potential brand advertising opportunities.</p></li>
+   <li><span class="tick">✓</span><p>Continue your existing water delivery business.</p></li>
+   <li><span class="tick">✓</span><p>Explore campaigns that suit your business and delivery locations.</p></li>
+  </ul>
+  <p class="disclaimer">Participation is subject to campaign availability and mutually agreed commercial terms. CAN MEDIA does not guarantee campaigns, earnings or profits.</p>
+ </div>
+</section>
+
+<section class="section who" id="who">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">Eligibility</div>
+   <h2>Who Can Join?</h2>
+  </div>
+  <div class="chips reveal">
+   <div class="chip">Water-can suppliers.</div>
+   <div class="chip">Water-can distributors.</div>
+   <div class="chip">Local water delivery businesses.</div>
+   <div class="chip">Suppliers operating 100, 500, 1,000 or more cans.</div>
+   <div class="chip">Businesses serving homes, apartments, offices, and shops across Chennai.</div>
+  </div>
+ </div>
+</section>
+
+<section class="cta" id="register">
+ <div class="container">
+  <div class="section-head reveal">
+   <div class="kicker">Partner registration</div>
+   <h2>Register Your Cans</h2>
+   <p style="color:var(--muted)">Tell us about your water-can business. We'll get in touch if there are suitable opportunities.</p>
+  </div>
+
+  <form class="partner-form reveal" id="partnerForm" novalidate>
+   <div class="form-grid">
+    <label class="field"><span>Full Name</span>
+     <input type="text" name="fullName" autocomplete="name" placeholder="Your name" required>
+    </label>
+    <label class="field"><span>Business Name</span>
+     <input type="text" name="businessName" autocomplete="organization" placeholder="Your business name" required>
+    </label>
+    <label class="field"><span>Mobile Number</span>
+     <input type="tel" name="mobile" autocomplete="tel" inputmode="tel" placeholder="+91" required>
+    </label>
+    <label class="field"><span>Email Address <span class="opt">(optional)</span></span>
+     <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+    </label>
+    <label class="field"><span>Business Location</span>
+     <input type="text" name="businessLocation" placeholder="e.g. Ambattur, Chennai" required>
+    </label>
+    <label class="field"><span>Approximate Daily Deliveries <span class="opt">(optional)</span></span>
+     <input type="text" name="dailyDeliveries" inputmode="numeric" placeholder="e.g. 150">
+    </label>
+    <label class="field full"><span>Areas Served in Chennai</span>
+     <textarea name="areasServed" rows="3" placeholder="e.g. Ambattur, Anna Nagar, Avadi, Padi" required></textarea>
+    </label>
+
+    <fieldset class="field full" data-group="canCount">
+     <legend>Number of Water Cans</legend>
+     <div class="pills">
+      <label class="pill"><input type="radio" name="canCount" value="Below 100"><span>Below 100</span></label>
+      <label class="pill"><input type="radio" name="canCount" value="100–249"><span>100–249</span></label>
+      <label class="pill"><input type="radio" name="canCount" value="250–499"><span>250–499</span></label>
+      <label class="pill"><input type="radio" name="canCount" value="500–999"><span>500–999</span></label>
+      <label class="pill"><input type="radio" name="canCount" value="1,000+"><span>1,000+</span></label>
+     </div>
+    </fieldset>
+
+    <fieldset class="field full" data-group="stickerInterest">
+     <legend>Are you interested in allowing advertising stickers on your cans?</legend>
+     <div class="pills">
+      <label class="pill"><input type="radio" name="stickerInterest" value="Yes"><span>Yes</span></label>
+      <label class="pill"><input type="radio" name="stickerInterest" value="Need More Details"><span>Need More Details</span></label>
+      <label class="pill"><input type="radio" name="stickerInterest" value="Depends on the Campaign"><span>Depends on the Campaign</span></label>
+     </div>
+    </fieldset>
+
+    <label class="field full"><span>Additional Information <span class="opt">(optional)</span></span>
+     <textarea name="additionalInfo" rows="4" placeholder="Anything else you'd like us to know about your business or routes"></textarea>
+    </label>
+   </div>
+
+   <button class="btn rose submit" type="submit">Submit Partner Enquiry</button>
+   <p class="form-status" role="status" aria-live="polite"></p>
+   <p class="form-note">Submitting an enquiry does not guarantee any campaign. Opportunities depend on availability and mutually agreed terms.</p>
+  </form>
+  <div class="contact-strip"><span>+91 90251 72907</span><span class="strip-sep" aria-hidden="true">•</span><a href="mailto:officialcanmediaadvertisement@gmail.com">officialcanmediaadvertisement@gmail.com</a></div>
+  <div class="contact-social"><span>Follow us</span><div class="social-links on-light"><a class="social-link" href="https://www.instagram.com/official_can.media/" target="_blank" rel="noopener noreferrer" aria-label="CAN MEDIA on Instagram (opens in a new tab)" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-instagram"/></svg></a><a class="social-link" href="https://www.facebook.com/profile.php?id=61595251861620" target="_blank" rel="noopener noreferrer" aria-label="CAN MEDIA on Facebook (opens in a new tab)" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-facebook"/></svg></a><a class="social-link" href="https://www.linkedin.com/mynetwork/grow/" target="_blank" rel="noopener noreferrer" aria-label="CAN MEDIA on LinkedIn (opens in a new tab)" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-linkedin"/></svg></a></div></div>
+ </div>
+</section>
+</main>
+
+<section class="brand-banner-wrap" aria-label="CAN MEDIA brand">
+ <div class="container">
+  <figure class="brand-banner reveal">
+   <img src="./images/can-media-brand.png" alt="CAN MEDIA — Your brand on every can" decoding="async" onerror="this.closest('.brand-banner-wrap').style.display='none'">
+  </figure>
+ </div>
+</section>
+
+<footer class="footer">
+ <div class="container">
+  <div class="footer-top">
+   <div>
+    <div class="logo">CAN MEDIA<span>.</span></div>
+    <p>SIDCO – Industrial Estate, Ambattur, Chennai – 600058</p>
+   </div>
+   <a class="btn light" href="index.html">← Back to CAN MEDIA Website</a>
+  </div>
+  <div class="footer-extra">
+   <div><h4>Contact Us</h4><div class="contact"><a href="tel:+919025172907">+91 90251 72907</a><a class="contact-email" href="mailto:officialcanmediaadvertisement@gmail.com">officialcanmediaadvertisement@gmail.com</a></div></div>
+   <div class="footer-follow"><h4>Follow Us</h4><div class="social-links"><a class="social-link" href="https://www.instagram.com/official_can.media/" target="_blank" rel="noopener noreferrer" aria-label="CAN MEDIA on Instagram (opens in a new tab)" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-instagram"/></svg></a><a class="social-link" href="https://www.facebook.com/profile.php?id=61595251861620" target="_blank" rel="noopener noreferrer" aria-label="CAN MEDIA on Facebook (opens in a new tab)" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-facebook"/></svg></a><a class="social-link" href="https://www.linkedin.com/mynetwork/grow/" target="_blank" rel="noopener noreferrer" aria-label="CAN MEDIA on LinkedIn (opens in a new tab)" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-linkedin"/></svg></a></div></div>
+  </div>
+  <div class="bottom"><span>© 2026 CAN MEDIA. All rights reserved.</span><span>Can Partner Programme • Chennai</span></div>
+ </div>
+</footer>
+
+<script>
+/* Google Apps Script web app dedicated to Can Partner registrations. */
+const PARTNER_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwNHYDb4vvjgQ42TzCoqMVOPOtQPPNff15ZwGXtNygSSmqeBCVFiNuTfj3S0MR9lIs_/exec';
+
+/* ---- Google Sheets submission helper for the Can Partner endpoint ----
+   Sends JSON as text/plain (no CORS preflight, which Apps Script cannot answer) and READS the reply.
+   Success is reported only if the script answers with JSON {"success":true}. If the reply is missing,
+   unreadable or says otherwise, the visitor is told it could not be confirmed and the form is kept. */
+let currentSubmissionId=null;
+function getSubmissionId(){
+ if(!currentSubmissionId)currentSubmissionId=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():(Date.now()+'-'+Math.random().toString(36).slice(2,10));
+ return currentSubmissionId; // stays the same on retries so the script can ignore a duplicate row
+}
+async function postToSheet(endpoint,payload){
+ const ctrl=new AbortController();
+ const timer=setTimeout(()=>ctrl.abort(),25000);
+ try{
+  const res=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload),redirect:'follow',signal:ctrl.signal});
+  let data=null;
+  try{data=await res.json()}catch(_){}
+  if(res.ok&&data&&(data.success===true||data.status==='success'||data.result==='success'))return {ok:true};
+  return {ok:false,reason:(data&&(data.error||data.message))||('unconfirmed (HTTP '+res.status+')')};
+ }catch(e){
+  return {ok:false,reason:e.name==='AbortError'?'timeout':'network or unreadable response'};
+ }finally{clearTimeout(timer)}
+}
+
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const form=document.getElementById('partnerForm');
+const statusEl=form.querySelector('.form-status');
+const btn=form.querySelector('.submit');
+let busy=false;
+
+const REQUIRED=['fullName','businessName','mobile','businessLocation','areasServed'];
+const GROUPS=['canCount','stickerInterest'];
+
+function setError(host,input,msg){
+  const old=host.querySelector(':scope > .field-error');
+  if(old)old.remove();
+  if(input)input.classList.toggle('field-invalid',!!msg);
+  if(msg){const s=document.createElement('span');s.className='field-error';s.setAttribute('role','alert');s.textContent=msg;host.appendChild(s)}
+}
+function checkField(el){
+  const v=el.value.trim();let msg='';
+  if(el.name==='mobile'){
+    const d=v.replace(/\D/g,'');
+    if(!v)msg='This field is required.';
+    else if(!/^\+?[0-9\s\-()]+$/.test(v)||d.length<10||d.length>15)msg='Please enter a valid mobile number.';
+  }else if(el.name==='email'){
+    if(v&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))msg='Please enter a valid email address.';
+  }else if(REQUIRED.includes(el.name)&&!v)msg='This field is required.';
+  setError(el.closest('label'),el,msg);
+  return !msg;
+}
+function checkGroup(name){
+  const fs=form.querySelector('[data-group="'+name+'"]');
+  const ok=!!form.querySelector('input[name="'+name+'"]:checked');
+  setError(fs,null,ok?'':'Please choose an option.');
+  return ok;
+}
+form.addEventListener('input',e=>{if(e.target.classList.contains('field-invalid'))checkField(e.target)});
+form.addEventListener('change',e=>{if(e.target.type==='radio')checkGroup(e.target.name)});
+
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(busy)return;
+  statusEl.textContent='';
+  let first=null;
+  [...REQUIRED,'email'].forEach(n=>{const el=form.elements[n];if(!checkField(el)&&!first)first=el});
+  GROUPS.forEach(g=>{if(!checkGroup(g)&&!first)first=form.querySelector('input[name="'+g+'"]')});
+  if(first){first.focus();return}
+
+  const f=new FormData(form);
+  const payload={
+    formType:'partner',
+    submittedAt:new Date().toISOString(),
+    submissionId:getSubmissionId(),
+    fullName:(f.get('fullName')||'').trim(),
+    businessName:(f.get('businessName')||'').trim(),
+    mobileNumber:(f.get('mobile')||'').trim(),
+    email:(f.get('email')||'').trim(),
+    businessLocation:(f.get('businessLocation')||'').trim(),
+    dailyDeliveries:(f.get('dailyDeliveries')||'').trim(),
+    areasServed:(f.get('areasServed')||'').trim(),
+    numberOfCans:f.get('canCount')||'',
+    advertisingInterest:f.get('stickerInterest')||'',
+    additionalInformation:(f.get('additionalInfo')||'').trim()
+  };
+  busy=true;btn.disabled=true;btn.textContent='Submitting...';
+  try{
+    const result=await postToSheet(PARTNER_FORM_ENDPOINT,payload);
+    if(!result.ok)throw new Error(result.reason);
+    currentSubmissionId=null;
+    form.reset();
+    statusEl.style.color='#1a8a4a';
+    statusEl.textContent='Thank you! Your partner enquiry has been submitted.';
+  }catch(err){
+    console.warn('Enquiry not confirmed:',err.message);
+    statusEl.style.color='#c0392b';
+    statusEl.textContent="We couldn't confirm that your enquiry was received. Please try again, or call +91 90251 72907.";
+  }finally{
+    busy=false;btn.disabled=false;btn.textContent='Submit Partner Enquiry';
+  }
+});
+</script>
+</body>
+</html>
